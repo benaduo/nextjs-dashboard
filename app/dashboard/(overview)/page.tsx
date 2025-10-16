@@ -1,5 +1,4 @@
 import { lusitana } from "../../ui/fonts";
-import { fetchCardData } from "../../lib/data";
 import RevenueChart from "../../ui/dashboard/revenue-chart";
 import LatestInvoices from "../../ui/dashboard/latest-invoices";
 import { Suspense } from "react";
@@ -8,12 +7,6 @@ import CardWrapper from "@/app/ui/dashboard/cards";
 export default async function Page() {
 
   
-  const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices,
-  } = await fetchCardData();
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
